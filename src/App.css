@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #070744;
+  --secondary-color: #4FD1C5;
+  --accent-color: #FFD700;
+  --background-light: #e6f7f5;
+  --text-dark: #1a202c;
+  --text-light: #718096;
+  --white: #ffffff;
+  --gray-light: #f7fafc;
+  --gray-medium: #edf2f7;
+  --gray-dark: #cbd5e0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+}
+
+.gradient-bg {
+  background: linear-gradient(180deg, var(--secondary-color) 0%, var(--background-light) 100%);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0a0a66;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #3db9af;
+  transform: translateY(-2px);
+}
+
+.btn-accent {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.btn-accent:hover {
+  background-color: #e6c300;
+  transform: translateY(-2px);
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.nav-link {
+  position: relative;
+  color: var(--text-dark);
+  transition: color 0.3s ease;
+}
+
+.nav-link:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--secondary-color);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--secondary-color);
+}
+
+.nav-link:hover:after {
+  width: 100%;
+}
+
+.active-nav-link {
+  color: var(--secondary-color);
+}
+
+.active-nav-link:after {
+  width: 100%;
+}
